@@ -15,7 +15,7 @@ Feito por Diogo Liberalesso Inácio. Para contato ou feedback, fale no Instagram
 - **Windows x64:** [**Baixar UFN-Combate-v0.5.0-Windows.zip**](https://github.com/diogolibinacio200-coder/ufn-combate-0.5.0/releases/download/v0.5.0/UFN-Combate-v0.5.0-Windows.zip) — extraia e execute `UFNCombate.exe` mantendo `UFNCombate.pck` na mesma pasta.
 - **Código-fonte:** [**Baixar UFN-Combate-v0.5.0-Codigo.zip**](https://github.com/diogolibinacio200-coder/ufn-combate-0.5.0/releases/download/v0.5.0/UFN-Combate-v0.5.0-Codigo.zip) — projeto Godot 4.7.2 para editar e recompilar.
 
-Os hashes SHA-256 estão em [SHA256-0.5.0.txt](outputs/SHA256-0.5.0.txt) e no [BUILD-INFO.json](BUILD-INFO.json).
+Os hashes SHA-256 estão em [SHA256-0.5.0.txt](SHA256-0.5.0.txt) e no [BUILD-INFO.json](BUILD-INFO.json).
 
 ![Menu com demonstração automática](docs/screens/v030/attract_menu.png)
 
