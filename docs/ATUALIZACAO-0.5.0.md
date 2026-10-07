@@ -1,6 +1,6 @@
 # UFN Combate 0.5.0 — Combate, animações e Kart UFN
 
-A 0.5.0 foi construída sobre o código da 0.4.0, preservando o elenco, as arenas, as torres, os modos de jogo e o formato de salvamento. A atualização concentra as mudanças nas Ultimates de Vitor do Mal e Mirkos, na apresentação dos lutadores e no modo Kart.
+A 0.5.0 foi construída sobre o código da 0.4.0, preservando o elenco, as arenas, as torres, os modos de jogo e o formato de salvamento. A atualização concentra as mudanças nas Ultimates dos dois Vitors e de Mirkos, na apresentação dos lutadores e no modo Kart.
 
 ## Ultimates
 
@@ -8,7 +8,8 @@ O comando continua sendo **D + A2**, com 100 de energia. D representa a ação d
 
 | Personagem | Sequência confirmada | Dano-base | Encerramento |
 |---|---|---:|---|
-| Vitor do Mal | Rajada Sombria: primeiro impacto, sequência rápida de socos e finalização; 15 acertos | 280 | Remove a tonalidade vermelha do alvo, aplica recuo e devolve o controle após a reação de queda |
+| Vitor do Bem | Ultimate de contra-ataque: primeiro impacto, tonalidade vermelha temporária, sequência rápida de socos e finalização; 15 acertos | 280 | Remove a tonalidade vermelha do alvo, aplica recuo e devolve o controle após a reação de queda |
+| Vitor do Mal | Rajada Sombria com a coreografia das aliadas, sequência rápida de socos e finalização; 15 acertos | 280 | Aplica recuo, devolve o controle após a reação de queda e não usa a tonalidade vermelha do Vitor do Bem |
 | Mirkos | Seis impactos de unidades mecânicas, recolhimento das peças e montagem da armadura | 200 | Ativa a armadura pelo período original de 480 quadros, equivalente a oito segundos de simulação |
 
 O dano total passa pela redução de combos do sistema. Não há um dano inicial extra somado novamente à sequência. As pausas de impacto são curtas nos golpes intermediários e mais longas na finalização. O relógio da luta fica suspenso durante a coreografia.
@@ -19,7 +20,7 @@ Reset de round e cancelamento da sequência limpam captura, tonalidade, pausas e
 
 ## Aliada exclusiva de Vitor do Mal
 
-Uma aliada loira com arte própria participa das invocações, da guarda, da coreografia da Ultimate e do poder de kart de Vitor do Mal. O atlas está em `assets/sprites/vitor_ally_blonde/atlas.png` e suas poses são definidas em `scripts/ally_art.gd`.
+Uma aliada loira com arte própria participa das invocações, da guarda, da coreografia da Ultimate e do poder de kart de Vitor do Mal. O atlas está em `assets/sprites/vitor_ally_blonde/atlas.png` e suas poses são definidas em `scripts/ally_art.gd`. Ela não participa da Ultimate vermelha do Vitor do Bem.
 
 Essa aliada é um recurso de apoio de Vitor. Não recebe slot no elenco, ID de lutador ou progresso próprio. **Maria continua sendo uma personagem jogável**, com sua arte e suas habilidades preservadas. A substituição visual se limita à representação dos poderes de Vitor.
 

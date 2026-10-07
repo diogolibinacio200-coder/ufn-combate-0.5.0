@@ -35,9 +35,9 @@ func run():
 		if id==10:
 			for p in 2:arena.motion.states[p].phase=.75
 			await snap("050_lorenzo_stride_b")
-	for id in [9,4]:
+	for id in [1,9,4]:
 		combat.setup([id,3]);arena.motion.reset()
-		var frames=[1,49,111,124] if id==9 else [10,44,92,110,131,143]
+		var frames=[1,49,111,124] if id in [1,9] else [10,44,92,110,131,143]
 		for frame in frames:
 			combat.cinematic={"active":true,"frame":frame,"duration":126 if id==9 else 144,"character":id,"attacker":0,"defender":1}
 			await snap("050_ultimate_%02d_%03d"%[id,frame])

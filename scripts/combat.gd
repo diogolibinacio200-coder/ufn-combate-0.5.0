@@ -213,9 +213,12 @@ func _start_cinematic(a: Dictionary, d: Dictionary, m: Dictionary) -> void:
 		a.combo_damage = 0.0
 	var damage: float = roundf(m.damage * maxf(0.32,1.0-a.combo*0.12))
 	cinematic = {"active":true,"frame":0,"duration":120,"attacker":a.player,"defender":d.player,"character":a.id,"name":m.name,"origin_a":a.x,"origin_d":d.x,"damage_total":damage,"damage_applied":0.0,"pulse":0,"base_combo":a.combo}
-	if a.id in [4,9]:
-		cinematic.merge({"duration":126 if a.id==9 else 144,"phase":"capture" if a.id==9 else "robots","phase_frame":0,"captured":true,"impact_pause":0,"last_impact":-100,"armor_duration":int(m.duration)},true)
-		d.ultimate_tint = a.id==9
+	if a.id in [1,4,9]:
+		var authored_vitor: bool = a.id in [1,9]
+		cinematic.merge({"duration":126 if authored_vitor else 144,"phase":"capture" if authored_vitor else "robots","phase_frame":0,"captured":true,"impact_pause":0,"last_impact":-100,"armor_duration":int(m.duration)},true)
+		# Red capture feedback belongs to Vitor do Bem; Vitor do Mal keeps
+		# the authored ally choreography without the red tint.
+		d.ultimate_tint = a.id==1
 	a.state = "super"
 	d.state = "super_victim"
 	a.anim = "super"
@@ -245,7 +248,7 @@ func _start_cinematic(a: Dictionary, d: Dictionary, m: Dictionary) -> void:
 	_event("cinematic_start",a.player,m.name,{"target":d.player,"duration":cinematic.duration,"character":a.id,"phase":cinematic.get("phase","sequence")})
 
 func _tick_cinematic() -> void:
-	if cinematic.character in [4,9]:
+	if cinematic.character in [1,4,9]:
 		_tick_signature_cinematic()
 		return
 	tick_count += 1
@@ -310,7 +313,7 @@ func _tick_signature_cinematic() -> void:
 	var a:Dictionary=fighters[cinematic.attacker]
 	var d:Dictionary=fighters[cinematic.defender]
 	var frame:int=cinematic.frame
-	var vitor:bool=cinematic.character==9
+	var vitor:bool=cinematic.character in [1,9]
 	a.frame=frame
 	d.frame=frame
 	d.hit_flash=maxi(0,d.hit_flash-1)
@@ -775,7 +778,7 @@ func _process_move(f: Dictionary, other: Dictionary, contacts: Array) -> void:
 	var m: Dictionary = f.move
 	if f.frame < m.startup or f.frame >= m.startup + m.active: return
 	if f.frame == m.startup:
-		if m.kind in ["robot_super","rush_combo"]:
+		if m.kind in ["robot_super","rush_combo","rush_red"]:
 			_event("ultimate_phase",f.player,m.name,{"character":f.id,"phase":"robots" if f.id==4 else "capture","target":other.player})
 		match m.kind:
 			"projectile","jump_toss": _spawn(f,m,"projectile",f.x + f.face * 67.0,f.y - 112.0)

@@ -130,7 +130,8 @@ Renderer Compatibility/OpenGL; interface base de 1280 × 720; simulação a 60 H
 
 ## Atualização 0.5.0
 
-- **Vitor do Mal:** Rajada Sombria, com preparação, captura, 15 impactos e golpe final com recuo. Dano total de 280 antes da redução de combos; defesa e erro não prendem o adversário.
+- **Vitor do Bem:** sua Ultimate de contra-ataque mantém o gatilho original e agora usa a sequência vermelha com captura, 15 impactos e golpe final com recuo. Dano total de 280 antes da redução de combos; o vermelho é feedback temporário do alvo.
+- **Vitor do Mal:** Rajada Sombria, com preparação, captura, 15 impactos e golpe final com recuo, acompanhada pela coreografia das aliadas. A sequência não aplica o feedback vermelho do Vitor do Bem.
 - **Mirkos:** seis ataques de robôs, recolhimento e montagem da armadura. A sequência causa 200 de dano antes da redução de combos e preserva os oito segundos de armadura e seus bônus originais.
 - **Aliada loira exclusiva:** nova arte para as invocações e os poderes de Vitor do Mal na luta e no kart. Maria continua no elenco, com sua própria arte e seus próprios poderes.
 - **Animações:** caminhada ligada à distância percorrida, recuo com ciclo próprio, respiração, reação de aterrissagem e transições entre poses, incluindo Lorenzo e as duas aparências do Diogo.

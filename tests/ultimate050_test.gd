@@ -76,7 +76,7 @@ func confirmed(id:int,side:int) -> void:
 	check(d.state=="knockdown" and signf(d.vel.x)==a.face,"Finisher knockback points away from attacker")
 	check(c.projectiles.is_empty(),"No robots or projectile objects left behind")
 	if id==9:
-		check(tint_seen,"Vitor capture highlights victim temporarily")
+		check(not tint_seen,"Vitor do Mal keeps the ally choreography without red capture feedback")
 		check(has_event(log,"ultimate_phase"),"Vitor exposes authored phases")
 	else:
 		check(no_early_armor and a.transform==480,"Armor is granted only after assembly, full original duration")
@@ -195,7 +195,33 @@ func edge_cases(id:int,side:int) -> void:
 	frames(c,200)
 	check(c.fighters[1-side].hp==1000.0 and c.fighters[side].transform==0,"Reset prevents orphan damage and armor rewards")
 
+func confirmed_vitor_bem_red() -> void:
+	# Vitor do Bem keeps his original counter-ultimate trigger. The authored
+	# cinematic begins only after the opponent attacks into the counter window.
+	var c=fresh(1,0,95.0)
+	var a:Dictionary=c.fighters[0]
+	var d:Dictionary=c.fighters[1]
+	activate(c,0)
+	frames(c,22)
+	c.tick([{}, {"attack":true,"attack_pressed":true}])
+	var started:bool=false
+	var tint_seen:bool=false
+	var log:Array=[]
+	for _i in 300:
+		c.tick([{},{}])
+		log.append_array(c.events.duplicate(true))
+		started=started or c.cinematic.active
+		tint_seen=tint_seen or d.ultimate_tint
+		if c.cinematic.active:
+			check(a.state=="super" and d.state=="super_victim","Vitor do Bem counter locks the cinematic actors")
+	check(started,"Vitor do Bem starts the authored red ultimate after a counter-hit")
+	check(is_equal_approx(d.hp,720.0),"Vitor do Bem red ultimate keeps the 280 damage budget")
+	check(log.filter(func(e):return e.type=="super_hit").size()==15,"Vitor do Bem red ultimate keeps fifteen authored impacts")
+	check(tint_seen,"Only Vitor do Bem applies the red capture feedback")
+	check(not c.cinematic.active and not d.ultimate_tint,"Vitor do Bem returns control and clears the red feedback")
+
 func run() -> void:
+	confirmed_vitor_bem_red()
 	for id in [9,4]:
 		for side in 2:
 			confirmed(id,side)

@@ -48,16 +48,17 @@ Com defesa segurada, o novo pressionamento de A2 tenta Ultimate; A3 tenta troca;
 
 Defesa alta/baixa é testada contra o nível do golpe. A defesa perfeita usa janela de cinco frames e o aparo frontal de três frames. Há perda de guarda, quebra de guarda, redução de dano em combos e limites de cancelamento/juggle.
 
-As Ultimates confirmadas dos demais lutadores continuam usando a sequência genérica de 120 frames. Vitor do Mal e Mirkos usam `cinematic` com fases e impactos próprios, atualizados por `_tick_signature_cinematic()`. André mantém zonas de gás evitáveis, sem capturar os dois lutadores.
+As Ultimates confirmadas dos demais lutadores continuam usando a sequência genérica de 120 frames. Vitor do Bem, Vitor do Mal e Mirkos usam `cinematic` com fases e impactos próprios, atualizados por `_tick_signature_cinematic()`. André mantém zonas de gás evitáveis, sem capturar os dois lutadores.
 
 | Ultimate | Tipo | Preparação / atividade / recuperação | Dano-base | Coreografia após confirmação |
 |---|---|---|---:|---|
-| Vitor do Mal — Rajada Sombria | `rush_combo` | 22 / 8 / 36 frames | 280 | 126 frames de sequência, mais 24 de pausas de impacto |
+| Vitor do Bem — Agora Chega! | `counter` + `cinematic` | 17 / 7 / 32 frames | 280 | Contra-ataque que abre 126 frames de sequência, mais 24 de pausas de impacto e tonalidade vermelha temporária |
+| Vitor do Mal — Rajada Sombria | `rush_combo` | 22 / 8 / 36 frames | 280 | 126 frames de sequência, mais 24 de pausas de impacto e coreografia da aliada |
 | Mirkos — Protocolo Singularidade | `robot_super` | 27 / 9 / 54 frames | 200 | 144 frames de sequência, mais 16 de pausas de impacto |
 
 Ambas custam **100 de energia** e usam a pausa de ativação de 12 frames do sistema de Ultimate. Os 280/200 são orçamentos de dano antes da redução de combos, não custos de energia. Os tempos da tabela são os valores da 0.5.0; os campos permitidos em `data/balance.json` continuam ajustáveis.
 
-Vitor usa os impactos `[1,25,31,37,43,49,55,61,67,73,79,85,91,97,111]`. O primeiro aplica captura com `ultimate_tint`, os intermediários compõem a fase `flurry`, e o último entra em `finisher`, remove a tonalidade e inicia o recuo. Mirkos usa `[10,27,44,61,78,92]`, muda para `recall` no frame 103 e `assembly` no 117. Ao completar o frame 144, recebe `transform=480`: oito segundos de simulação, com +20% de dano e +30 de alcance nos normais. A armadura não modifica permanentemente o MoveDB.
+Os dois Vitors usam os impactos `[1,25,31,37,43,49,55,61,67,73,79,85,91,97,111]`. O primeiro impacto do Vitor do Bem aplica `ultimate_tint`; os intermediários compõem a fase `flurry`, e o último entra em `finisher`, remove a tonalidade e inicia o recuo. A sequência do Vitor do Mal usa os mesmos impactos, mas reserva a apresentação da aliada e mantém `ultimate_tint` desativado. Mirkos usa `[10,27,44,61,78,92]`, muda para `recall` no frame 103 e `assembly` no 117. Ao completar o frame 144, recebe `transform=480`: oito segundos de simulação, com +20% de dano e +30 de alcance nos normais. A armadura não modifica permanentemente o MoveDB.
 
 Enquanto a sequência está ativa, o relógio da luta, os comandos dos jogadores e os timers normais ficam suspensos. `impact_pause` segura o avanço da coreografia nos impactos; não reaplica dano. A finalização limpa movimento pendente e buffers, libera o atacante e coloca o defensor na reação normal de queda. A apresentação consome `cinematic_start`, `ultimate_phase`, `super_hit` e `cinematic_end`; o evento `hit` complementar usa `silent_audio=true` para evitar som duplicado.
 

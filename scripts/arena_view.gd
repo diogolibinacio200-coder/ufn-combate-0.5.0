@@ -638,8 +638,8 @@ func _ice_shard(pos: Vector2,height: float,width: float,c: Color,alpha: float=1.
 	draw_line(pos+Vector2(0,-height),pos,Color(c,.55*alpha),1,true)
 
 func _draw_super_sequence(sequence: Dictionary,t: float) -> void:
-	if int(sequence.get("character",0))==9:
-		_draw_vitor_sequence(sequence)
+	if int(sequence.get("character",0)) in [1,9]:
+		_draw_vitor_sequence(sequence,int(sequence.get("character",0))==9)
 		return
 	if int(sequence.get("character",0))==4:
 		_draw_mirkos_sequence(sequence)
@@ -761,7 +761,7 @@ func _cinema_impact(position: Vector2, age: float, color: Color, final: bool = f
 		draw_line(position+direction*radius*.32,position+direction*radius,Color(color,alpha),3.0 if final else 2.0,true)
 	if final:draw_arc(position,radius*.87,0,TAU,40,Color(color,alpha*.75),3,true)
 
-func _draw_vitor_sequence(sequence: Dictionary) -> void:
+func _draw_vitor_sequence(sequence: Dictionary, allies: bool = true) -> void:
 	# Positions are presentation clones. Damage, capture and release are owned by
 	# the deterministic combat timeline; no extra fighters or particles are born.
 	var frame=int(sequence.frame)
@@ -787,8 +787,8 @@ func _draw_vitor_sequence(sequence: Dictionary) -> void:
 		target.x+=hit*7
 		target.y-=hit*(7 if hit_index%3 else 11)
 	draw_rect(Rect2(0,0,1280,720),Color(.007,.005,.028,.44))
-	_glow(Vector2(700,420),350,Color("7538bc"),.35)
-	var color=Color("d8a2ff")
+	var color=Color("d8a2ff") if allies else Color("ff4f5d")
+	_glow(Vector2(700,420),350,Color("7538bc") if allies else Color("8f1728"),.35)
 	if frame>=24 and frame<103:
 		for i in range(int(12*particle_intensity)):
 			var y=255+i*24
@@ -814,20 +814,23 @@ func _draw_vitor_sequence(sequence: Dictionary) -> void:
 			draw_fighter(ghost,t)
 	draw_fighter(b,t)
 	draw_fighter(a,t)
-	# The exclusive blonde ally joins Vitor's choreography; all damage stays on
-	# the existing finite strike timeline, with no extra hitboxes or roster slot.
-	var ally_alpha=smoothstep(0.0,12.0,float(frame))*(1.0-smoothstep(117.0,126.0,float(frame)))
-	var ally_position=Vector2(lerpf(1140,995,smoothstep(0.0,24.0,float(frame))),590)
-	var ally_pose="windup" if frame<25 else (["punch0","punch1"][hit_index%2] if since<4 else "guard")
-	if finish:ally_pose="kick";ally_position.x+=smoothstep(111.0,126.0,float(frame))*90
-	_ufn_ally(ally_position,t,0,-1,ally_pose,ally_alpha)
+	# The blonde ally is exclusive to Vitor do Mal. Vitor do Bem keeps the
+	# red capture feedback without borrowing the ally choreography.
+	if allies:
+		var ally_alpha=smoothstep(0.0,12.0,float(frame))*(1.0-smoothstep(117.0,126.0,float(frame)))
+		var ally_position=Vector2(lerpf(1140,995,smoothstep(0.0,24.0,float(frame))),590)
+		var ally_pose="windup" if frame<25 else (["punch0","punch1"][hit_index%2] if since<4 else "guard")
+		if finish:ally_pose="kick";ally_position.x+=smoothstep(111.0,126.0,float(frame))*90
+		_ufn_ally(ally_position,t,0,-1,ally_pose,ally_alpha)
 	var impact=Vector2(target.x-54,target.y-188+(hit_index%3)*5)
 	if frame<103 or finish:_cinema_impact(impact,since,color,finish)
 	if frame>=25 and frame<103:
 		draw_arc(impact-Vector2(60,0),50+(hit_index%2)*15,-.65,.45,18,Color(color,.55*hit),3,true)
 	if frame>=103 and frame<111:
 		_glow(a_pos+Vector2(48,-140),34+float(frame-103)*4,color,.6)
-	_cinema_bars("RAJADA SOMBRIA", "VITOR DO MAL  /  "+("IMPACTO FINAL" if finish else ("SEQUÊNCIA DE SOCOS" if frame>=25 else "CAPTURA")),color)
+	var title:String = "RAJADA SOMBRIA" if allies else "AGORA CHEGA!"
+	var fighter_name:String = "VITOR DO MAL" if allies else "VITOR DO BEM"
+	_cinema_bars(title, fighter_name+"  /  "+("IMPACTO FINAL" if finish else ("SEQUÊNCIA DE SOCOS" if frame>=25 else "CAPTURA")),color)
 
 func _draw_combat_robot(p: Vector2, face: float, strike: float, t: float, alpha: float = 1.0) -> void:
 	var armor=Color("294b67");armor.a=alpha

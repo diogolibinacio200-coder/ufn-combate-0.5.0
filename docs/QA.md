@@ -6,7 +6,7 @@ Validação em **07/10/2026**, Windows x64, **Godot 4.7.2 stable**. Testes de l�
 
 ## Testes automáticos
 
-**17 suítes, 3.305 verificações, zero falhas.** Importação e execuções concluídas com saída 0, sem `SCRIPT ERROR` ou `ERROR`. [Log completo](validation/v050/tests.txt).
+**17 suítes, 3.460 verificações, zero falhas.** Importação e execuções concluídas com saída 0, sem `SCRIPT ERROR` ou `ERROR`. [Log completo](validation/v050/tests.txt).
 
 | Suíte | Verificações |
 |---|---:|
@@ -21,17 +21,17 @@ Validação em **07/10/2026**, Windows x64, **Godot 4.7.2 stable**. Testes de l�
 | Release | 43 |
 | Polimento | 650 |
 | Torres | 500 |
-| Ultimates 0.5.0 | 794 |
+| Ultimates 0.5.0 | 949 |
 | Animações 0.5.0 | 328 |
 | Pilotos 0.5.0 | 442 |
 | Kart 0.5.0 | 53 |
 | Skins 0.5.0 | 23 |
 | Aliada 0.5.0 | 23 |
-| **Total** | **3.305** |
+| **Total** | **3.460** |
 
 As contagens incluem combinações de personagens, lados e estados; não representam esse número de funcionalidades ou partidas humanas independentes.
 
-- Ultimates: custo único, captura confirmada, defesa, aparo, erro, interrupção, KO, treino, reinício, tint temporário, congelamento do relógio, descarte de comandos e retorno ao controle. Vitor causa 280 de dano em 15 impactos; Mirkos, 200 em seis impactos, com armadura ao final da montagem e benefícios originais de oito segundos.
+- Ultimates: custo único, captura confirmada, defesa, aparo, erro, interrupção, KO, treino, reinício, tint temporário, congelamento do relógio, descarte de comandos e retorno ao controle. Os dois Vitors causam 280 de dano em 15 impactos; somente Vitor do Bem aplica o vermelho temporário, enquanto Vitor do Mal usa a coreografia das aliadas. Mirkos causa 200 em seis impactos, com armadura ao final da montagem e benefícios originais de oito segundos.
 - Animação: todos os 16 IDs de combate, sentidos de caminhada, apoio e elevação dos pés, aterrissagem, transições, atlas completos, limite de cache e simulação inalterada pelo desenho.
 - Pilotos: 14 personagens e skin do Diogo, mãos no volante, pernas no cockpit, direção, aceleração, boost, salto e impacto.
 - Skin: comparação de 600 frames entre os dois visuais de Diogo, incluindo ataques e Ultimate, hitboxes, seleção, troca, estatísticas e retomada da torre compartilhadas.
@@ -46,7 +46,7 @@ Capturas reais da engine registram os 16 lutadores caminhando, duas fases da pas
 
 - [Pilotos e skin do Diogo](screens/v050/pilots.png).
 - [Lorenzo caminhando](screens/050_walk_10.png) e [passada alternada](screens/050_lorenzo_stride_b.png).
-- [Vitor e sua aliada](screens/050_ultimate_09_049.png).
+- [Vitor do Mal e sua aliada](screens/050_ultimate_09_049.png); Vitor do Bem usa a sequência vermelha e não convoca a aliada.
 - [Robôs de Mirkos](screens/050_ultimate_04_044.png) e [montagem da armadura](screens/050_ultimate_04_131.png).
 - [Aliada: soco](screens/050_ally_punch1_both_sides.png), [chute](screens/050_ally_kick_both_sides.png), [guarda](screens/050_ally_counter_right.png).
 - [Seleção das pistas](screens/v050/kart_selection.png), [UFN/Andradas](screens/v050/andradas_overview.png) e [dois jogadores](screens/v050/andradas_split.png).
