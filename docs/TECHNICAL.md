@@ -52,7 +52,7 @@ As Ultimates confirmadas dos demais lutadores continuam usando a sequência gen�
 
 | Ultimate | Tipo | Preparação / atividade / recuperação | Dano-base | Coreografia após confirmação |
 |---|---|---|---:|---|
-| Vitor do Bem — Agora Chega! | `counter` + `cinematic` | 17 / 7 / 32 frames | 280 | Contra-ataque que abre 126 frames de sequência, mais 24 de pausas de impacto e tonalidade vermelha temporária |
+| Vitor do Bem — Agora Chega! | `counter` + `cinematic` | 12 / 42 / 44 frames | 280 | Contra-ataque que abre 126 frames de sequência, mais 24 de pausas de impacto e tonalidade vermelha temporária |
 | Vitor do Mal — Rajada Sombria | `rush_combo` | 22 / 8 / 36 frames | 280 | 126 frames de sequência, mais 24 de pausas de impacto e coreografia da aliada |
 | Mirkos — Protocolo Singularidade | `robot_super` | 27 / 9 / 54 frames | 200 | 144 frames de sequência, mais 16 de pausas de impacto |
 
