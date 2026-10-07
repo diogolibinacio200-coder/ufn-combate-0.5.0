@@ -1,0 +1,68 @@
+[
+  {
+    "suite": "import",
+    "exit": 0,
+    "passed": true,
+    "seconds": 3.05
+  },
+  {
+    "suite": "ufn_combat_test",
+    "exit": 0,
+    "passed": true,
+    "seconds": 4.81
+  },
+  {
+    "suite": "modules_test",
+    "exit": 0,
+    "passed": true,
+    "seconds": 0.25
+  },
+  {
+    "suite": "audio_test",
+    "exit": 0,
+    "passed": true,
+    "seconds": 0.9
+  },
+  {
+    "suite": "defense_test",
+    "exit": 0,
+    "passed": true,
+    "seconds": 0.25
+  },
+  {
+    "suite": "data_test",
+    "exit": 0,
+    "passed": true,
+    "seconds": 0.25
+  },
+  {
+    "suite": "flow_test",
+    "exit": 0,
+    "passed": true,
+    "seconds": 1.74
+  },
+  {
+    "suite": "test_kart",
+    "exit": 0,
+    "passed": true,
+    "seconds": 1.27
+  },
+  {
+    "suite": "v2_test",
+    "exit": 0,
+    "passed": true,
+    "seconds": 1.84
+  },
+  {
+    "suite": "release_test",
+    "exit": 0,
+    "passed": true,
+    "seconds": 2.12
+  },
+  {
+    "suite": "polish_test",
+    "exit": 0,
+    "passed": true,
+    "seconds": 2.11
+  }
+]

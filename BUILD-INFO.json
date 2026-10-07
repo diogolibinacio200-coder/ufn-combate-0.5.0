@@ -1,0 +1,17 @@
+{
+  "version": "0.5.0",
+  "engine": "Godot 4.7.2 stable",
+  "source_drive_archive": "UFN-Combate-v0.4.0-Codigo.zip",
+  "source_drive_sha256": "1002A88C4CC04A0B968BA6203EB261EC88695FD6EDCD8902F77F89D0492079CC",
+  "windows_runtime": "UFNCombate.exe",
+  "windows_runtime_sha256": "AB1824F85BFD8E0E4128182C000C4003A3E042245B2967848D089B2A04B22424",
+  "windows_runtime_signature": "Valid Authenticode signature inherited from the supplied 0.4.0 Windows executable",
+  "pck_sha256": "EFEA60706D339BF971E3D597D8E3201FB369E2FA917F3D16C5AA4DDE5627EC58",
+  "windows_zip_sha256": "D04E8DF81A9C92D7279B0CD73295637B05C59893D332BE93C53A40BF2A0EAA60",
+  "source_zip_sha256": "See SHA256-0.5.0.txt beside the release archives; omitted here because the source archive contains this metadata file.",
+  "validation": "docs/QA.md",
+  "limitations": [
+    "Native Windows executable launch was not performed in this session; the PCK was exported and validated through Godot's resource import path.",
+    "Human play with two physical controllers remains a destination-machine check."
+  ]
+}

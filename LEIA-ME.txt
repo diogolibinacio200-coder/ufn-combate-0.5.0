@@ -1,0 +1,39 @@
+UFN COMBATE — 0.5.0 — WINDOWS x64
+Criado e desenvolvido por Diogo Liberalesso Inácio.
+
+Extraia todo o ZIP em uma pasta nova e execute UFNCombate.exe.
+Mantenha UFNCombate.exe e UFNCombate.pck juntos.
+
+J1: WASD + J/K/L/U. Esquiva: Shift.
+J2: setas + Num1/Num2/Num3/Num4. Esquiva: Num0.
+J/K/L = leve/forte/chute. U = defesa.
+Frente e trás seguem o lado do adversário.
+
+Trás + leve: especial A.
+Frente, baixo + forte: especial ofensivo.
+Trás + baixo + leve: especial B.
+Baixo, frente + chute: especial C.
+Defesa + leve: agarrão. Defesa + forte: Ultimate com energia cheia.
+Defesa + chute: troca em Duplas.
+Tab na seleção: guia. Esc: voltar/pausa. F11: tela cheia.
+Controles podem ser remapeados no jogo.
+
+Torre UFN: escolha FÁCIL, MÉDIO ou DIFÍCIL e uma escada com 3, 5, 8 ou 10 oponentes. André CSTH e Kelvin são os dois chefes finais. Ao vencer Kelvin, a torre se desmonta antes do final do campeão.
+
+Kart: leve acelera, forte freia/ré, chute faz drift, defesa usa item.
+Solte um drift carregado na pista para receber miniturbo.
+
+Cinco pistas: Campus, Vila Belga, Centro, Desafio Universitário e UFN / Andradas.
+A pista nova está disponível na corrida rápida e no contrarrelógio.
+O campeonato preserva suas quatro etapas clássicas.
+
+Vitor do Mal: Rajada Sombria, sequência de socos e golpe final.
+Mirkos: ataque de robôs, recolhimento e formação da armadura.
+A nova aliada loira pertence aos poderes de Vitor; Maria continua jogável.
+Diogo Careca permanece uma skin do Diogo, com os mesmos golpes e progresso.
+
+Esta atualização parte da versão 0.4.0 e preserva os modos existentes.
+Detalhes dos testes, capturas e pacote entregue: docs/QA.md.
+
+Novidades: docs/ATUALIZACAO-0.5.0.md. Pista: docs/PISTA-UFN.md.
+Golpes: GOLPES.md. Créditos/licenças: LICENSES.md.

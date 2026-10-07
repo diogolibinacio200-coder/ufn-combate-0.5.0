@@ -1,0 +1,98 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[   0% ] [90m[1mfirst_scan_filesystem[22m | Started Inicialização do Projeto (5 steps)[39m[0m
+[   0% ] [90m[1mfirst_scan_filesystem[22m | Escaneando estrutura de arquivos...[39m[0m
+[  16% ] [90m[1mfirst_scan_filesystem[22m | Carregando nomes de classe globais...[39m[0m
+[  33% ] [90m[1mfirst_scan_filesystem[22m | Verificando GDExtensions...[39m[0m
+[  50% ] [90m[1mfirst_scan_filesystem[22m | Criando scripts autoload...[39m[0m
+[  66% ] [90m[1mfirst_scan_filesystem[22m | Inicializando plugins...[39m[0m
+[  83% ] [90m[1mfirst_scan_filesystem[22m | Iniciando escaneamento de arquivos...[39m[0m
+[92m[ DONE ][39m [1mfirst_scan_filesystem[22m
+[0m
+[   0% ] [90m[1mloading_editor_layout[22m | Started Carregando editor (5 steps)[39m[0m
+[   0% ] [90m[1mloading_editor_layout[22m | Carregando layout do editor...[39m[0m
+[  16% ] [90m[1mloading_editor_layout[22m | Carregando abas...[39m[0m
+[92m[ DONE ][39m [1mloading_editor_layout[22m
+[0m
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+UFN COMBATE: 195 verificações, 0 falhas
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+Support modules: 62 checks, 0 failures.
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+Audio assets: 47 checks, 0 failures. Shutdown retired active audio playbacks.
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+Defense boundaries: 11 checks, 0 failures.
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+DATA TESTS: 12 checks, 0 failures
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+FLUXO UFN: 32 verificações, 0 falhas
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS smooth closed campus circuit with distance parameterization
+PASS acceleration produces forward movement
+PASS braking removes speed
+PASS steering turns the vehicle
+PASS releasing a charged drift awards miniturbo
+PASS crossing the finish without checkpoints never awards a lap
+PASS reverse crossing cannot advance checkpoints
+PASS crossing outside the finite road gate cannot count
+PASS skipping the next checkpoint cannot count
+PASS all 20 ordered checkpoints award exactly one lap
+PASS three complete laps finish the race
+PASS shield absorbs one attack without slowing
+PASS unshielded impact stuns and slows
+PASS recovery preserves checkpoint progress and resets speed
+PASS random boxes can award six item categories including signatures
+PASS AI finishes all three legal laps on track 0 (79.1 s)
+PASS AI finishes all three legal laps on track 1 (71.4 s)
+PASS AI finishes all three legal laps on track 2 (85.6 s)
+PASS AI finishes all three legal laps on track 3 (96.8 s)
+PASS two cameras share the same racing world
+PASS both players can accelerate simultaneously using independent physical keys
+PASS releasing player one's key leaves player two accelerating
+PASS holding item key triggers only its first press edge
+PASS driving through an item box grants an item and starts respawn
+PASS launched pulse hits another racer
+PASS pause stops the entire race timer and simulation
+KART TESTS: 26 passed / 0 failed
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+V2: 64 verificações, 0 falhas
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+RELEASE: 43 verificações, 0 falhas
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+POLISH: 650 checks, 0 failures
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+TOWERS: 500 checks, 0 failures
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+ULTIMATES 0.5.0: 794 checks, 0 failures
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+ANIMATION050: 328 checks, 0 failures
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+DRIVER050: 442 checks, 0 failures
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+TRACK 0: 79.1 s, 60 gates, 28.75 peak
+TRACK 1: 71.4 s, 60 gates, 29.52 peak
+TRACK 2: 85.5 s, 60 gates, 29.13 peak
+TRACK 3: 96.7 s, 60 gates, 29.11 peak
+TRACK 4: 71.7 s, 60 gates, 29.67 peak
+KART 0.5.0: 53 checks, 0 failures
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+SKINS 0.5.0: 23 checks, 0 failures
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+ALLY 0.5.0: 23 checks, 0 failures
