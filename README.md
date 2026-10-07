@@ -8,6 +8,15 @@ Luta 2D com personagens da comunidade, cenários inspirados na UFN e em Santa Ma
 
 Feito por Diogo Liberalesso Inácio. Para contato ou feedback, fale no Instagram [@diogok_i](https://www.instagram.com/diogok_i/) ou pelo e-mail [diogolib.inacio200@gmail.com](mailto:diogolib.inacio200@gmail.com)!
 
+## Downloads
+
+### **[BAIXAR UFN COMBATE 0.5.0 NO GITHUB](https://github.com/diogolibinacio200-coder/ufn-combate-0.5.0/releases/tag/v0.5.0)**
+
+- **Windows x64:** [**Baixar UFN-Combate-v0.5.0-Windows.zip**](https://github.com/diogolibinacio200-coder/ufn-combate-0.5.0/releases/download/v0.5.0/UFN-Combate-v0.5.0-Windows.zip) — extraia e execute `UFNCombate.exe` mantendo `UFNCombate.pck` na mesma pasta.
+- **Código-fonte:** [**Baixar UFN-Combate-v0.5.0-Codigo.zip**](https://github.com/diogolibinacio200-coder/ufn-combate-0.5.0/releases/download/v0.5.0/UFN-Combate-v0.5.0-Codigo.zip) — projeto Godot 4.7.2 para editar e recompilar.
+
+Os hashes SHA-256 estão em [SHA256-0.5.0.txt](outputs/SHA256-0.5.0.txt) e no [BUILD-INFO.json](BUILD-INFO.json).
+
 ![Menu com demonstração automática](docs/screens/v030/attract_menu.png)
 
 ## Jogar no Windows
